@@ -1,0 +1,86 @@
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="name" type="xs:string"/>
+    <xs:element name="part_name" type="xs:string"/>
+    <xs:element name="port_name">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="[A-Z][A-Z][A-Z]"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+    <xs:element name="origin" type="xs:string"/>
+    <xs:element name="price">
+        <xs:simpleType>
+            <xs:restriction base="xs:integer">
+                <xs:minInclusive value="20"/>
+                <xs:maxInclusive value="200"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+    <xs:element name="peripheral" type="xs:string"/>
+    <xs:element name="energy_consumption">
+        <xs:simpleType>
+            <xs:restriction base="xs:integer">
+                <xs:enumeration value="1"/>
+                <xs:enumeration value="2"/>
+                <xs:enumeration value="20"/>
+                <xs:enumeration value="30"/>
+                <xs:enumeration value="200"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+    <xs:element name="cooler" type="xs:string"/>
+    <xs:element name="parts">
+        <xs:complexType mixed="true">
+            <xs:sequence>
+                <xs:element ref="part" maxOccurs="unbounded" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="ports">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="port" maxOccurs="unbounded" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="part">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="part_name"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="port">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="port_name"/>
+            </xs:sequence>
+            <xs:attribute type="xs:byte" name="port_id"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="critical" type="xs:string"/>
+    <xs:element name="component">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="name"/>
+                <xs:element ref="origin"/>
+                <xs:element ref="price"/>
+                <xs:element ref="peripheral"/>
+                <xs:element ref="energy_consumption"/>
+                <xs:element ref="cooler"/>
+                <xs:element ref="parts"/>
+                <xs:element ref="ports"/>
+                <xs:element ref="critical"/>
+            </xs:sequence>
+            <xs:attribute type="xs:byte" name="id"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Device">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="component" maxOccurs="unbounded" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

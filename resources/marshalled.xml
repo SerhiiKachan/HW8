@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Device>
+    <component id="7">
+        <name>Component</name>
+        <origin>GB</origin>
+        <price>300</price>
+        <peripheral>false</peripheral>
+        <energy_consumption>25</energy_consumption>
+        <cooler>true</cooler>
+        <ports port_id="2">
+            <port_name>USB</port_name>
+        </ports>
+        <critical>false</critical>
+    </component>
+</Device>

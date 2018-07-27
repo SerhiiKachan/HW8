@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Device>
+    <component id="1">
+        <name>Monitor</name>
+        <origin>USA</origin>
+        <price>100</price>
+        <peripheral>true</peripheral>
+        <energy_consumption>20</energy_consumption>
+        <cooler>false</cooler>
+        <parts/>
+        <ports>
+            <port port_id="1">
+                <port_name>COM</port_name>
+            </port>
+        </ports>
+        <critical>false</critical>
+    </component>
+    <component id="2">
+        <name>System unit</name>
+        <origin>Germany</origin>
+        <price>200</price>
+        <peripheral>false</peripheral>
+        <energy_consumption>200</energy_consumption>
+        <cooler>true</cooler>
+        <parts>
+            <part>
+                <part_name>Memory</part_name>
+            </part>
+            <part>
+                <part_name>Video card</part_name>
+            </part>
+            <part>
+                <part_name>Processor</part_name>
+            </part>
+        </parts>
+        <ports>
+            <port port_id="1">
+                <port_name>COM</port_name>
+            </port>
+            <port port_id="2">
+                <port_name>USB</port_name>
+            </port>
+            <port port_id="3">
+                <port_name>LPT</port_name>
+            </port>
+        </ports>
+        <critical>true</critical>
+    </component>
+    <component id="3">
+        <name>Keyboard</name>
+        <origin>China</origin>
+        <price>30</price>
+        <peripheral>true</peripheral>
+        <energy_consumption>2</energy_consumption>
+        <cooler>false</cooler>
+        <parts/>
+        <ports>
+            <port port_id="2">
+                <port_name>USB</port_name>
+            </port>
+        </ports>
+        <critical>false</critical>
+    </component>
+    <component id="4">
+        <name>Mouse</name>
+        <origin>China</origin>
+        <price>20</price>
+        <peripheral>true</peripheral>
+        <energy_consumption>1</energy_consumption>
+        <cooler>false</cooler>
+        <parts/>
+        <ports>
+            <port port_id="2">
+                <port_name>USB</port_name>
+            </port>
+        </ports>
+        <critical>true</critical>
+    </component>
+    <component id="5">
+        <name>Speakers</name>
+        <origin>Poland</origin>
+        <price>40</price>
+        <peripheral>true</peripheral>
+        <energy_consumption>30</energy_consumption>
+        <cooler>false</cooler>
+        <parts/>
+        <ports>
+            <port port_id="4">
+                <port_name>AUX</port_name>
+            </port>
+        </ports>
+        <critical>false</critical>
+    </component>
+</Device>
